@@ -1,68 +1,221 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* navbar */
+nav h2 {
+    font-size: 1.4rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.nav-dropdown {
+    position: relative;
+    cursor: pointer;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.nav-dropdown ul {
+    position: absolute;
+    top: 130%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.226);
+    border-radius: 0 0 .5rem .5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    backdrop-filter: blur(2px);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.nav-dropdown:hover ul {
+    visibility: visible;
+    opacity: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.nav-dropdown ul li {
+    padding: 5px;
+    margin: 2px 0px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nav-dropdown ul a{
+    padding: 0.4rem 2rem;
+}
+
+img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+}
+/* navbar */
+
+/* sidebar */
+nav {
+    transition: .5s;
+}
+
+.ul a {
+    font-size: .8rem;
+    transition: .4s;
+}
+
+.ul li {
+    /* background-color: blueviolet; */
+    border: solid 1px #1d1b1b4b;
+    padding: .5rem 0rem;
+}
+
+.ul li .a1 {
+
+    padding: .7rem 7rem .7rem .9rem;
+}
+
+.ul li .a2 {
+
+    padding: .7rem 8rem .7rem .9rem;
+}
+
+.ul li .a3 {
+
+    padding: .7rem 7rem .7rem .9rem;
+}
+
+.ul li .a4 {
+
+    padding: .7rem 7rem .7rem .9rem;
+}
+
+.ul li .a5 {
+
+    padding: .7rem 7rem .7rem .9rem;
+}
+
+.ul li .a6 {
+
+    padding: .7rem 7.7rem .7rem .9rem;
+}
+
+.ul li .a7 {
+    padding: .7rem 7.2rem .7rem .9rem;
+}
+
+.ul li a:hover,
+.active {
+    background-color: lightblue;
+}
+
+i {
+    font-size: 1rem;
+}
+
+.logout {
+    /* background-color: aqua; */
+    position: relative;
+    top: 15rem;
+    padding: .3rem 7.2rem .3rem .9rem;
+}
+/* sidebar */
+
+/* dashboard */
+hr{
+    color: #ccc2c2;
+}
+
+/* ul a {
+    font-size: .8rem;
+    background-color: burlywood;
+    padding: .7rem 3rem .7rem 0;
+}
+
+ul li {
+
+    padding: 0rem 1rem;
+} */
+
+.range{
+    font-size: 13px;
+}
+
+.range p{
+    cursor: pointer;
+    padding: 0 1.2rem;
+}
+
+.month-dropdown{
+    font-size: 13px;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+
+.month-dropdown{
+    border: solid 1px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.bar{
+    margin-top: 20rem;  
+}
+
+
+
+
+hr {
+    color: #ccc2c2;
+}
+
+/* ul a {
+    font-size: .8rem;
+    background-color: burlywood;
+    padding: .7rem 3rem .7rem 0;
+}
+
+ul li {
+
+    padding: 0rem 1rem;
+} */
+
+.range {
+    font-size: 13px;
+}
+
+.range p {
+    cursor: pointer;
+    padding: 0 1.2rem;
+}
+
+.month-dropdown {
+    font-size: 13px;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+
+.month-dropdown {
+    border: solid 1px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.bar {
+    margin-top: 20rem;
+}
+
+.nav-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-dropdown ul {
+    position: absolute;
+    top: 130%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.226);
+    border-radius: 0 0 .5rem .5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    backdrop-filter: blur(2px);
+}
+
+.nav-dropdown:hover ul {
+    visibility: visible;
+    opacity: 1;
 }
